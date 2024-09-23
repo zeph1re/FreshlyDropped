@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recipe_card"
+    android:layout_width="175dp"
+    android:layout_height="281dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/yellow"
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/dark_green"
+        android:padding="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/recipe_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/image_1"
+            />
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/star_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@id/recipe_image">
+
+            <!--        Star-->
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_icon" />
+
+            <!--        Number-->
+            <TextView
+                android:id="@+id/review_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.0"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/recipe_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@id/star_review"
+            android:layout_marginVertical="8dp"/>
+
+<!--        Price & Bookmark -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@id/recipe_title">
+
+
+            <TextView
+                android:id="@+id/recipe_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp60.000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_weight="0.3"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/bookmark_inactive"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import project.ganda.freshlydropped.databinding.FragmentHomePageBinding
 import project.ganda.freshlydropped.view.adapter.PromoCardAdapter
+import project.ganda.freshlydropped.view.adapter.RecipeAdapter
 
 
 class HomePage : Fragment() {
@@ -17,6 +18,7 @@ class HomePage : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var promoCardAdapter: PromoCardAdapter
+    private lateinit var recipeAdapter : RecipeAdapter
 
 
 
@@ -29,9 +31,13 @@ class HomePage : Fragment() {
         val root : View = binding.root
 
         val promoCardCarousel = binding.promo
+        val popularCardRecipe = binding.popularRecipeCardRv
 
         promoCardAdapter = PromoCardAdapter()
         setUpViewPager(promoCardCarousel)
+
+        recipeAdapter = RecipeAdapter()
+        setUpPopularRecipe()
 
         return root
     }
@@ -60,6 +66,12 @@ class HomePage : Fragment() {
 //                }
 //            }
 //        )
+
+
+    }
+
+    private fun setUpPopularRecipe() {
+
     }
 
 
