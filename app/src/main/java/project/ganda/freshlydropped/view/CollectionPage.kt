@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import project.ganda.freshlydropped.R
 
-
-class SettingsPage : Fragment() {
+class CollectionPage : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +15,7 @@ class SettingsPage : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings_page, container, false)
+        return inflater.inflate(R.layout.fragment_collection_page, container, false)
     }
 
 

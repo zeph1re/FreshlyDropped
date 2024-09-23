@@ -5,8 +5,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import project.ganda.freshlydropped.view.HomePage
-import project.ganda.freshlydropped.view.SettingsPage
-import project.ganda.freshlydropped.view.TicketPage
+import project.ganda.freshlydropped.view.CartPage
+import project.ganda.freshlydropped.view.CollectionPage
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,16 +23,19 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(HomePage())
                     true
                 }
-                R.id.ticket -> {
-                    loadFragment(TicketPage())
+                R.id.collection -> {
+                    loadFragment(CollectionPage())
                     true
                 }
-                R.id.settings -> {
-                    loadFragment(SettingsPage())
+                R.id.cart -> {
+                    loadFragment(CartPage())
                     true
                 }
 
-                else -> true
+                else -> {
+                    loadFragment(CartPage())
+                    true
+                }
             }
         }
     }
